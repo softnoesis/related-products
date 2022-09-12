@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<!--
+/**
+ * Softnoesis
+ * Copyright(C) 12/2022 Softnoesis <contact@softnoesis.com>
+ * @package Softnoesis_RelatedProduct
+ * @copyright Copyright(C) 2015 Softnoesis (contact@softnoesis.com)
+ * @author Softnoesis <contact@softnoesis.com>
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd">
+	<router id="admin">
+		<route frontName="catproduct" id="catproduct">
+			<module before="Softnoesis_RelatedProduct" name="Softnoesis_RelatedProduct"/>
+		</route>
+	</router>
+</config>

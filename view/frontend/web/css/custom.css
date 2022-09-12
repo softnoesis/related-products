@@ -1,0 +1,107 @@
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 22%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+span.catagory-product-price {
+    font-weight: 700;
+}
+.catalog-product-view .heading {
+    text-align: center;
+}
+.catalog-product-view .column.view-more a:hover {
+    background-color: transparent;
+    color: #6e716e;
+}
+
+.catalog-product-view .column.view-more a {
+    border-radius: 100%;
+    padding: 0;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    background-color: #6e716e;
+    color: #ffffff;
+    border: 2px solid #6e716e;
+    margin: 50px 0;
+    transition: all 0.2s ease-in-out;
+    display: inline-block;
+    text-align: center;
+}
+i.fa.fa-chevron-left, i.fa.fa-chevron-right {
+    background-color: #808080;
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    line-height: 25px;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+}
+.owl-theme .owl-nav [class*="owl-"],.owl-theme .owl-nav [class*="owl-"]:hover{
+    background-color: transparent !important;
+}
+i.fa.fa-chevron-left:before {
+    content: '<';
+    font-size: 24px;
+    padding: 0;
+    position: absolute;
+    left: -5px;
+    right: 0;
+}
+i.fa.fa-chevron-right:before {
+    content: '>';
+    font-size: 24px;
+    padding: 0;
+    position: absolute;
+    right: -5px;
+    left: 0;
+}
+.owl-nav {
+    position: absolute;
+    top: 28%;
+    width: 100%;
+}
+.owl-prev {
+    left: 0;
+    position: absolute;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+.owl-next {
+    position: absolute;
+    right: 0;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+.product-item-info {
+    margin: 0 auto;
+}

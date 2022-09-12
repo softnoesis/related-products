@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Softnoesis
+ * Copyright(C) 12/2022 Softnoesis <contact@softnoesis.com>
+ * @package Softnoesis_RelatedProduct
+ * @copyright Copyright(C) 2015 Softnoesis (contact@softnoesis.com)
+ * @author Softnoesis <contact@softnoesis.com>
+ */
+-->
+<page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+	 <head>
+        <css src="Softnoesis_RelatedProduct::css/custom.css" />
+        <css src="Softnoesis_RelatedProduct::css/owl.carousel.css" />
+        <css src="Softnoesis_RelatedProduct::css/owl.theme.default.css" />
+    </head>
+    <body>
+      <referenceContainer name="content">
+        <container name="custom.container" after="product.info.details">
+             <block class="Softnoesis\RelatedProduct\Block\Module" name="current.category.on.product" template="Softnoesis_RelatedProduct::currentCategory.phtml" after="-"/>
+        </container>
+      </referenceContainer>
+        <move element="product.info.overview" destination="page.main.title"/>
+    </body>
+</page>

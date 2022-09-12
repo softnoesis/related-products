@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Softnoesis
+ * Copyright(C) 12/2022 Softnoesis <contact@softnoesis.com>
+ * @package Softnoesis_RelatedProduct
+ * @copyright Copyright(C) 2015 Softnoesis (contact@softnoesis.com)
+ * @author Softnoesis <contact@softnoesis.com>
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="softnoesis" translate="label" sortOrder="350" class="ck-tab">
+            <label>Softnoesis</label>
+        </tab>
+        <section id="Softnoesis_tab" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Category Related Product</label>
+            <tab>softnoesis</tab>
+            <resource>Softnoesis_RelatedProduct::contentconfig</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General</label>
+                <attribute type="expanded">1</attribute>
+                 <comment>
+                    <![CDATA[
+                    <div id="softnoesis-info">
+                        <a href="https://www.softnoesis.com/" target="_blank">
+                        <img class="softnoesis-logo" src="https://www.softnoesis.com/wp-content/uploads/2020/06/softnoesis-new.png">Softnoesis Private Limited</a>© 2015
+                        <a href="https://www.softnoesis.com/contact/" target="_blank">Contact us</a>
+                        <a href="contact@softnoesis.com">Mail for Support</a>
+                    </div>
+                    <div id="softnoesis-module">
+                        Category Related Product Extension -
+                        <span> Version 1.0.0 </span>
+                    </div>
+                    <hr style="border-top: 1px solid #e3e3e3" />
+                ]]>
+                </comment>
+                <field id="enable" translate="label" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Module Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Enable / Disable Softnoesis Category Related Product Module</comment>
+                </field>
+                <field id="title" translate="label" type="text" showInDefault="1" showInWebsite="1" showInStore="1" sortOrder="30">
+                    <label>Set Title</label>
+                    <comment>Set Related Product title</comment>
+                </field>
+                <field id="productnumber" translate="label comment" sortOrder="40" type="text" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Enter Show Product No</label>
+                    <comment>Please Enter the Number of 1-100 ex:8</comment>
+                    <validate>required-entry validate-digits validate-not-negative-number validate-digits-range digits-range-1-100</validate>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
+
