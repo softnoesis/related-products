@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<!--
+/**
+ * Softnoesis
+ * Copyright(C) 06/2020 Softnoesis <ideveloper1990@gmail.com>
+ * @package Softnoesis_RelatedProduct
+ * @copyright Copyright(C) 2015 Softnoesis (ideveloper1990@gmail.com)
+ * @author Softnoesis <ideveloper1990@gmail.com>
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+	<menu>
+		<add id="Softnoesis::top_product" module="Softnoesis_RelatedProduct" resource="Softnoesis_RelatedProduct::product" sortOrder="11" title="RelatedProduct" parent="Softnoesis_Base::sn_base_root"/>
+        
+		<add action="adminhtml/system_config/edit/section/Softnoesis_tab" id="Softnoesis::top_softnoesis" module="Softnoesis_RelatedProduct" parent="Softnoesis::top_product" resource="Softnoesis_RelatedProduct::product" sortOrder="30" title="Configation"/>
+	</menu>
+</config>

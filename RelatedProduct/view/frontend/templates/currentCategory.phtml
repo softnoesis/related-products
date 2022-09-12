@@ -1,0 +1,54 @@
+<?php
+/**
+ * @var $block \Softnoesis\RelatedProduct\Block\Module
+ */
+?>
+<?php
+  $productcollection = $block->getProductcollection();
+  $isEnable = $block->getConfigValue();
+if ($isEnable == 1):
+    ?>  
+<div class="product-list-container" id="product-list-container">
+  <div class="col-xs-12 ctitle">
+    <h3><?php echo $block->getTitleValue();?></h3>
+  </div>
+  <div class="products wrapper grid products-grid">
+    <ol class="products list items product-items same-height">
+      <?php foreach ($productcollection as $key => $product):?>
+        <li class="item product product-item">  
+          <div class="product-item-info" data-container="product-grid"> 
+            <div class="cdz-hover-section">
+              <div class="cdz-product-top">
+                <a href="<?php echo $product->getProductUrl();?>" class="product photo product-item-photo" tabindex="-1">
+                  <div class="main-image">
+                    <img class="images" src="<?php echo $block->getMediaUrl().'catalog/product'.$product->getThumbnail();?>">
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="product details product-item-details">
+                <span class="product name product-item-name">
+                  <a class="product-item-link" href="<?php echo $product->getProductUrl();?>">
+                    <?php echo $product->getName();?>
+                  </a>
+                </span>
+                <div class="price-box price-final_price">
+                    <span class="price-container price-final_price tax weee">
+                      <span class="price-wrapper">
+                        <span class="price"><?php echo $block->getSymbol();?><?php echo number_format((float)$product->getPrice(), 2, '.', '');?></span>
+                      </span>
+                     </span>
+                </div>
+            </div>
+          </div>
+        </li>
+        <?php endforeach; ?>
+       <div class="column view-more">
+        <a href="<?php echo $block->getCurrentCategoryUrl();?>">View More</a>
+      </div>
+    </ol>
+  </div>
+</div>
+
+
+<?php endif; ?>
